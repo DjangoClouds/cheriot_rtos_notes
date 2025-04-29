@@ -18,8 +18,20 @@ I'm not going to answer all these questions - instead I'll just link to places t
   * [Visual Studio Code](https://apps.microsoft.com/detail/XP9KHM4BK9FZ7Q?hl=en-GB&gl=GB&ocid=pdpshare)
   * [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install)
   * [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/)
-* Connect the Sonata Board and makes ure that it's running the correct bitfile. We ran with V1.1, which works with the version of CHERIoT RTOS that we are currently using.
+* Update the Sonata and Run Some Firmware
+  * [Update the Sonata Firmware and bit file](https://lowrisc.github.io/sonata-system/doc/guide/updating-system.html) We ran with V1.1, which works with the version of CHERIoT RTOS that we are currently using.
+  * [From zero to CHERIoT in two minutes with Sonata](https://cheriot.org/fpga/ibex/2024/06/10/sonata-quick-start.html) This is a little out of date now as it was using V0.2 of the bitfile but it hasn't changed that much so it's not a bad example. The part about automatically upload the compiler code to the Sonata doesn't seem to work under Windows (there have been several attempts to get it working but, honestly, it's easy to just copy th files accross). 
   * Connecting to the serial port
+ 
+### Building the Code
+I keep forgetting the exact commands required, so here they are:
+```sh
+$ xmake config --sdk=/cheriot-tools --board=sonata
+$ xmake
+$ xmake run
+```
+You only need to run the first line once per project or if you've changed teh project config. The `--board` can be changed to target a specific build of the hardware. The processor is an FPGA so teh hardware can change, these fiels are released as the bitfiles that we loaded at the beginning. If you look in the code you find the available boards list and you will notice that sonata.json is actually a link to a json file with a specific version number specified. You can change the target board to try out code for new version of the bitfile that are not yet the default.
+TODO! Add an example here.
 
 ### Checkout the Git Repo
 * Make sure that Docker for Desktop is running
