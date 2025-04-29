@@ -31,7 +31,7 @@ $ xmake config --sdk=/cheriot-tools --board=sonata
 $ xmake
 $ xmake run
 ```
-You only need to run the first line once per project or if you've changed the project config. The `--board` can be changed to target a specific build of the hardware. The processor is an FPGA so the hardware can change, these fiels are released as the bitfiles that we loaded at the beginning. If you look in the code you find the available boards list and you will notice that sonata.json is actually a link to a json file with a specific version number specified. You can change the target board to try out code for new version of the bitfile that are not yet the default.
+You only need to run the first line once per project or if you've changed the project config. The `--board` can be changed to target a specific build of the hardware. The processor is an FPGA so the hardware can change, these files are released as the bitfiles that we loaded at the beginning. If you look in the code you find the available boards list and you will notice that sonata.json is actually a link to a json file with a specific version number specified. You can change the target board to try out code for new version of the bitfile that are not yet the default.
 TODO! Add an example here.
 
 ### Checkout the Git Repo
