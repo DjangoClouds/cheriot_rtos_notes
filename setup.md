@@ -1,6 +1,6 @@
 # Setting Up the Sonata Board & Development Environment on Windows 11
 This is how I set-up my Sonata board. It's always being updated, so your experience may vary slightly. There were several changes between bitfile V0.2 and V1.0 - it possible that sort of thing could happen again.
-This setup is using VX.XX
+This setup is using V1.1
 
 # Pre-requistes
 As metioned in the main instructions, please install the following packages before you start:
