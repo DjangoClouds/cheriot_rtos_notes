@@ -41,3 +41,17 @@ Adapted from [these instructions](https://lowrisc.github.io/sonata-system/doc/gu
   * The Debug Port will output at 921600 baud, 8 data bits, 1 stoip bit, no parity and no flow control.
   * If you press teh `Reset` button on teh Sonata board (also labelled `SW5`) you can watch teh laoding messages as they appar.
 
+# Cloning the Repository and Building Examples
+I'm going to use my fork but you could just clone the original repository. It's important that you use a recursive clone as there are submodules included.
+I already have my serial port open.
+* Open your WSL install (I used Ubuntu)
+* In WSL, browse to where you want the code to go (I have a subfolder called "github" in my home folder.
+* Do a recursive clone from your fork of the repo. For me it looks like this:
+```
+git clone --recurse https://github.com/DjangoClouds/cheriot-rtos
+```
+* If you don't have your own fork then clone the roiginal repo instead:
+```
+git clone --recurse https://github.com/CHERIoT-Platform/cheriot-rtos
+```
+* Wait for it to finish cloning.
