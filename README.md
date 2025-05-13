@@ -13,7 +13,7 @@ I'm not going to answer all these questions - instead I'll just link to places t
 * Where can a get a [Sonata board](https://www.mouser.co.uk/ProductDetail/NewAE/NAE-SONATA-ONE?qs=wT7LY0lnAe1k3dLvmL42Eg%3D%3D)?
 
 ## Setting Up The Building Platform on Windows 11
-These are teh basic notes, if you want more details have a look at my [setup page](./setup.md).
+These are the basic notes, if you want more details have a look at my [setup page](./setup.md).
 ### Before You Start
 * Make sure that you have installed:
   * [Visual Studio Code](https://apps.microsoft.com/detail/XP9KHM4BK9FZ7Q?hl=en-GB&gl=GB&ocid=pdpshare)
