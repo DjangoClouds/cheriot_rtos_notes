@@ -13,6 +13,7 @@ I'm not going to answer all these questions - instead I'll just link to places t
 * Where can a get a [Sonata board](https://www.mouser.co.uk/ProductDetail/NewAE/NAE-SONATA-ONE?qs=wT7LY0lnAe1k3dLvmL42Eg%3D%3D)?
 
 ## Setting Up The Building Platform on Windows 11
+These are teh basic notes, if you want more details have a look at my [setup page](./setup.md).
 ### Before You Start
 * Make sure that you have installed:
   * [Visual Studio Code](https://apps.microsoft.com/detail/XP9KHM4BK9FZ7Q?hl=en-GB&gl=GB&ocid=pdpshare)
@@ -31,8 +32,10 @@ $ xmake config --sdk=/cheriot-tools --board=sonata
 $ xmake
 $ xmake run
 ```
-You only need to run the first line once per project or if you've changed the project config. The `--board` can be changed to target a specific build of the hardware. The processor is an FPGA so the hardware can change, these files are released as the bitfiles that we loaded at the beginning. If you look in the code you find the available boards list and you will notice that sonata.json is actually a link to a json file with a specific version number specified. You can change the target board to try out code for new version of the bitfile that are not yet the default.
-TODO! Add an example here.
+You only need to run the first line once per project or if you've changed the project config. The `--board` can be changed to target a specific build of the hardware. The processor is an FPGA so the hardware can change, these files are released as the bitfiles that we loaded at the beginning. If you look in the code you find the available boards list and you will notice that sonata.json is actually a link to a json file with a specific version number specified. You can change the target board to try out code for new version of the bitfile that are not yet the default. For example, this specifically targets V1.1.
+```sh
+$ xmake config --sdk=/cheriot-tools --board=sonata-1.1
+```
 
 ### Checkout the Git Repo
 * Make sure that Docker for Desktop is running
